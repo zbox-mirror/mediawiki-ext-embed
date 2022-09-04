@@ -1,0 +1,47 @@
+{
+  "name": "cmfstore/mediawiki-embed",
+  "type": "mediawiki-extension",
+  "description": "MediaWiki embed extension.",
+  "license": "MIT",
+  "homepage": "https://github.com/cmfstore",
+  "keywords": [
+    "mediawiki",
+    "embed"
+  ],
+  "authors": [
+    {
+      "name": "z17 Dev",
+      "email": "mail@z17.Dev",
+      "homepage": "https://z17.dev/",
+      "role": "Developer"
+    },
+    {
+      "name": "z17 CX",
+      "email": "mail@z17.cx",
+      "homepage": "https://z17.cx/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/cmfstore/mediawiki-embed/issues",
+    "source": "https://github.com/cmfstore/mediawiki-embed"
+  },
+  "require": {
+    "php": ">=7.2",
+    "composer/installers": "^1.0.1",
+    "cmfstore/mediawiki-kernel": "*",
+    "embed/embed": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "MW_EXT_Embed.class.php"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "prepend-autoloader": false
+  },
+  "extra": {
+    "installer-name": "MW_EXT_Embed"
+  }
+}

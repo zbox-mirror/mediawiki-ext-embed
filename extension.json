@@ -1,0 +1,55 @@
+{
+  "name": "MW_EXT_Embed",
+  "version": "1.0.0",
+  "author": [
+    "[https://z17.dev/ z17 Dev]",
+    "[https://z17.cx/ z17 CX]",
+    "..."
+  ],
+  "url": "https://github.com/cmfstore",
+  "descriptionmsg": "mw-ext-embed-desc",
+  "license-name": "[https://choosealicense.com/licenses/mit/ MIT]",
+  "type": "parserhook",
+  "require": {
+    "MediaWiki": ">= 1.31.0",
+    "extensions": {
+      "MW_EXT_Kernel": "*"
+    }
+  },
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\CMFStore\\MW_EXT_Embed": "MW_EXT_Embed.class.php"
+  },
+  "Hooks": {
+    "ParserFirstCallInit": [
+      "MediaWiki\\Extension\\CMFStore\\MW_EXT_Embed::onParserFirstCallInit"
+    ],
+    "BeforePageDisplay": [
+      "MediaWiki\\Extension\\CMFStore\\MW_EXT_Embed::onBeforePageDisplay"
+    ]
+  },
+  "ExtensionMessagesFiles": {
+    "MW_EXT_EmbedMagic": "MW_EXT_Embed.i18n.magic.php"
+  },
+  "MessagesDirs": {
+    "MW_EXT_Embed": [
+      "i18n"
+    ]
+  },
+  "ResourceModules": {
+    "ext.mw.embed.styles": {
+      "styles": [
+        "styles/theme.css"
+      ],
+      "position": "top",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "modules",
+    "remoteExtPath": "MW_EXT_Embed/modules"
+  },
+  "manifest_version": 2
+}
